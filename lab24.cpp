@@ -28,7 +28,18 @@ ComplexNumber ComplexNumber::operator-(const ComplexNumber &c){
 	return ComplexNumber(real-c.real,imag-c.imag);
 }
 
-//Write your code here
+ComplexNumber ComplexNumber::operator*(const ComplexNumber &c){
+	return ComplexNumber(real*c.real,imag*c.imag);
+}		
+
+ComplexNumber ComplexNumber::operator/(const ComplexNumber &c){
+	return ComplexNumber(real/c.real,imag/c.imag);
+}
+
+ostream & operator<<(ostream &os, const ComplexNumber &c){
+	return os << c.real << "+" << c.imag;
+}
+
 
 int main(){
 	ComplexNumber a(1.5,2),b(3.2,-2.5),c(-1,1.2);	
